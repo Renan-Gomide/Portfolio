@@ -15,7 +15,7 @@
 
 - 📄 Know about my experiences [https://www.linkedin.com/in/renan-gomide-b9999066/](https://www.linkedin.com/in/renan-gomide-b9999066/)
 
-- ⚡ Fun fact **Passionate about Oriental Culture**
+- ⚡ Fun fact **Passionate about Oriental Culture and pen-and-paper RPG**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
