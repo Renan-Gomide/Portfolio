@@ -47,10 +47,10 @@ CREATE TABLE PF (
     IDPF_ID_Pessoa INT,
     CPF BIGINT NOT NULL,
     RG VARCHAR(10) NOT NULL,
-    ExpedidorRG VARCHAR(100) NOT NULL,
+    ExpedidorRG VARCHAR(100) NOT NULL DEFAULT 'SSP/SP',
     EstadoCivil VARCHAR(10) NOT NULL,
     Sexo CHAR(1) NOT NULL,
-    DataDeNascimento DATE NOT NULL,
+    DataDeNascimento DATE NOT NULL DEFAULT '1900-01-01',
     ID_Profissao INT NOT NULL,
     ID_Nacionalidade INT NOT NULL,
     CONSTRAINT PF_IDPF_ID_Pessoa_PK PRIMARY KEY (IDPF_ID_Pessoa),
@@ -87,12 +87,16 @@ GO
 CREATE TABLE TELEFONE (
     IDTelefone INT IDENTITY(1, 1),
     TipoTelefone VARCHAR(30) NOT NULL,
+    DDITelefone BIGINT NOT NULL DEFAULT '55',
+    DDDTelefone BIGINT NOT NULL DEFAULT '17',
     NumeroTelefone BIGINT NOT NULL,    
     ID_Privacidade INT NOT NULL,
     CONSTRAINT TELEFONE_IDTelefone_PK PRIMARY KEY (IDTelefone),
     CONSTRAINT TELEFONE_TipoTelefone_CK CHECK(TipoTelefone IN ('Celular', 'Fixo', 'Whatsapp')),
-	CONSTRAINT TELEFONE_NumeroTelefone_CK CHECK (NumeroTelefone>99 AND NumeroTelefone<=99999999999),
-	CONSTRAINT TELEFONE_NumeroTelefone_UN UNIQUE (NumeroTelefone),
+	CONSTRAINT TELEFONE_DDITelefone_CK CHECK (DDITelefone<=99),
+    CONSTRAINT TELEFONE_DDDTelefone_CK CHECK (DDDTelefone<=99),
+    CONSTRAINT TELEFONE_NumeroTelefone_CK CHECK (NumeroTelefone>99 AND NumeroTelefone<=99999999999),
+	CONSTRAINT TELEFONE_NumeroTelefone_UN UNIQUE (DDITelefone, DDDTelefone, NumeroTelefone),
 	CONSTRAINT TELEFONE_ID_Privacidade_FK FOREIGN KEY (ID_Privacidade) REFERENCES PRIVACIDADE(IDPrivacidade)
 );
 GO
@@ -130,9 +134,7 @@ CREATE TABLE ESTADO (
     IDEstado INT IDENTITY(1, 1),
     Estado CHAR(2) NOT NULL,
     CONSTRAINT ESTADO_IDEstado_PK PRIMARY KEY (IDEstado),
-    CONSTRAINT ESTADO_Estado_UN UNIQUE (Estado),
-	CONSTRAINT ESTADO_Estado_CK CHECK(Estado IN ('AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA',
-	'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'))
+    CONSTRAINT ESTADO_Estado_UN UNIQUE (Estado),	
 );
 GO
 
@@ -152,17 +154,15 @@ CREATE TABLE ENDERECO (
     IDEndereco INT IDENTITY(1, 1),
     Numero VARCHAR(25) NOT NULL,
     ID_CEP INT NOT NULL,
-    CONSTRAINT ENDERECO_IDEndereco_PK PRIMARY KEY (IDEndereco),
-    CONSTRAINT ENDERECO_IDEndereco_UN UNIQUE (IDEndereco),    
+    CONSTRAINT ENDERECO_IDEndereco_PK PRIMARY KEY (IDEndereco),        
 	CONSTRAINT ENDERECO_ID_CEP_FK FOREIGN KEY (ID_CEP) REFERENCES CEP(IDCEP)
 );
 GO
 
 CREATE TABLE COMPLEMENTO (
-    IDComplemento_ID_Endereco INT NOT NULL,
+    IDComplemento_ID_Endereco INT,
     Complemento VARCHAR(25) NOT NULL,
-    CONSTRAINT COMPLEMENTO_IDComplemento_ID_Endereco_PK PRIMARY KEY (IDComplemento_ID_Endereco),
-    CONSTRAINT COMPLEMENTO_IDComplemento_ID_Endereco_UN UNIQUE (IDComplemento_ID_Endereco),
+    CONSTRAINT COMPLEMENTO_IDComplemento_ID_Endereco_PK PRIMARY KEY (IDComplemento_ID_Endereco),    
     CONSTRAINT COMPLEMENTO_IDComplemento_ID_Endereco_FK FOREIGN KEY (IDComplemento_ID_Endereco) REFERENCES ENDERECO(IDEndereco)
 );
 GO
@@ -233,8 +233,8 @@ CREATE TABLE PROCESSOS (
 GO
 
 CREATE TABLE PARTE_PROCESSOS (
-    ID_Pessoa INT NOT NULL,
-    ID_Processos INT NOT NULL,
+    ID_Pessoa INT,
+    ID_Processos INT,
     Polo VARCHAR(8) NOT NULL,
     CONSTRAINT PARTE_PROCESSOS_PK PRIMARY KEY (ID_Pessoa, ID_Processos),    
     CONSTRAINT PARTE_PROCESSOS_Polo_CK CHECK (Polo IN ('Autor', 'Reu', 'Terceiro', 'Advogado')),	
@@ -243,44 +243,48 @@ CREATE TABLE PARTE_PROCESSOS (
 );
 GO
 
-CREATE TABLE MODELO (
-    IDModelo INT IDENTITY(1, 1),
+CREATE TABLE MODELOS (
+    IDModelos INT IDENTITY(1, 1),
     Atributos VARCHAR(100) NOT NULL,
     NomeModelo VARCHAR(100) NOT NULL,
     Tipo VARCHAR(100) NOT NULL,
-    CONSTRAINT MODELO_IDModelo_PK PRIMARY KEY (IDModelo),
-    CONSTRAINT MODELO_NomeModelo_UN UNIQUE (NomeModelo),
-    CONSTRAINT MODELO_Tipo_CK CHECK (Tipo IN ('Peticoes', 'Documentos')),    
+    CONSTRAINT MODELOS_IDModelos_PK PRIMARY KEY (IDModelos),
+    CONSTRAINT MODELOS_NomeModelo_UN UNIQUE (NomeModelo),
+    CONSTRAINT MODELOS_Tipo_CK CHECK (Tipo IN ('Peticoes', 'Documentos'))    
 );
 GO
 
 CREATE TABLE PETICOES (
     IDPeticoes INT IDENTITY(1, 1),
-    DataDoProtocolo DATE,
-    Valores VARCHAR,
-    ID_Processo INTEGER,
-    ID_Modelo INTEGER
+    DataDoProtocolo DATE NOT NULL,
+    Valores VARCHAR(150) NOT NULL,
+    ID_Processos INT NOT NULL,
+    ID_Modelos INT NOT NULL,
+    CONSTRAINT PETICOES_IDPeticoes_PK PRIMARY KEY (IDPeticoes),    	
+	CONSTRAINT PETICOES_ID_Processos_FK FOREIGN KEY (ID_Processos) REFERENCES PROCESSOS(IDProcessos),
+    CONSTRAINT PETICOES_ID_Modelos_FK FOREIGN KEY (ID_Modelos) REFERENCES MODELOS(IDModelos)
 );
 GO
 
 CREATE TABLE DOCUMENTOS (
-    IDDocumentos INTEGER PRIMARY KEY UNIQUE,
-    Data DATE,
-    Valores VARCHAR,
-    ID_Modelo INTEGER,
-    ID_Pessoa INTEGER
+    IDDocumentos INT IDENTITY(1, 1),
+    DataDoDocumento DATE NOT NULL,
+    Valores VARCHAR(150) NOT NULL,
+    ID_Modelos INT NOT NULL,
+    ID_Pessoa INT NOT NULL,
+    CONSTRAINT DOCUMENTOS_IDDocumentos_PK PRIMARY KEY (IDDocumentos),    	
+	CONSTRAINT DOCUMENTOS_ID_Modelos_FK FOREIGN KEY (ID_Modelos) REFERENCES MODELOS(IDModelos),
+    CONSTRAINT DOCUMENTOS_ID_Pessoa_FK FOREIGN KEY (ID_Pessoa) REFERENCES PESSOA(IDPessoa)
 );
 GO
 
 CREATE TABLE PARTE_DOCUMENTOS (
-    ID_Pessoa INTEGER,
-    ID_Documentos INTEGER,
-    ParteNoDocumento VARCHAR,
-    PRIMARY KEY (ID_Pessoa, ID_Documentos)
+    ID_Pessoa INT,
+    ID_Documentos INT,
+    ParteNoDocumento VARCHAR(8) NOT NULL,
+    CONSTRAINT PARTE_DOCUMENTOS_PK PRIMARY KEY (ID_Pessoa, ID_Documentos),    
+    CONSTRAINT PARTE_DOCUMENTOS_ParteNoDocumento_CK CHECK (ParteNoDocumento IN ('Cliente', 'Adverso', 'Advogado')),	
+	CONSTRAINT PARTE_DOCUMENTOS_ID_Pessoa_FK FOREIGN KEY (ID_Pessoa) REFERENCES PESSOA(IDPessoa),
+    CONSTRAINT PARTE_DOCUMENTOS_ID_Documentos_FK FOREIGN KEY (ID_Documentos) REFERENCES DOCUMENTOS(IDDocumentos)
 );
 GO
-
-
-
-
- 
