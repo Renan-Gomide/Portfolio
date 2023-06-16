@@ -243,22 +243,19 @@ CREATE TABLE PARTE_PROCESSOS (
 );
 GO
 
-
-
-
-
-
 CREATE TABLE MODELO (
     IDModelo INT IDENTITY(1, 1),
     Atributos VARCHAR(100) NOT NULL,
     NomeModelo VARCHAR(100) NOT NULL,
     Tipo VARCHAR(100) NOT NULL,
-    UNIQUE (IDModelo, NomeModelo)
+    CONSTRAINT MODELO_IDModelo_PK PRIMARY KEY (IDModelo),
+    CONSTRAINT MODELO_NomeModelo_UN UNIQUE (NomeModelo),
+    CONSTRAINT MODELO_Tipo_CK CHECK (Tipo IN ('Peticoes', 'Documentos')),    
 );
 GO
 
 CREATE TABLE PETICOES (
-    IDPeticoes INTEGER PRIMARY KEY UNIQUE,
+    IDPeticoes INT IDENTITY(1, 1),
     DataDoProtocolo DATE,
     Valores VARCHAR,
     ID_Processo INTEGER,
