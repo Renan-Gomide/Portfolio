@@ -1,0 +1,302 @@
+[
+    {
+        "nome":"Sebastiana Betina Gomes",
+        "cpf":"581.540.285-06",
+        "email":"sebastianabetinagomes@cabletech.com.br",
+        "cep":"67033-864",
+        "logradouro":"Quadra Quatorze",
+        "bairro":"Aur\u00e1",
+        "localidade":"Ananindeua",
+        "uf":"PA"
+    },
+    {
+        "nome":"Pietro Pedro da Concei\u00e7\u00e3o",
+        "cpf":"497.273.209-10",
+        "email":"pietropedrodaconceicao@panfletosecia.com",
+        "cep":"29118-390",
+        "logradouro":"Rua Japur\u00e1",
+        "bairro":"Planalto",
+        "localidade":"Vila Velha",
+        "uf":"ES"
+    },
+    {
+        "nome":"Daniela Marlene das Neves",
+        "cpf":"064.606.406-10",
+        "email":"daniela.marlene.dasneves@lexos.com.br",
+        "cep":"65905-484",
+        "logradouro":"Rua Jo\u00e3o Evangelista",
+        "bairro":"Sol Nascente",
+        "localidade":"Imperatriz",
+        "uf":"MA"
+    },
+    {
+        "nome":"Emanuelly J\u00e9ssica Elo\u00e1 Mendes",
+        "cpf":"360.622.882-16",
+        "email":"emanuelly.jessica.mendes@sestito.com.br",
+        "cep":"15075-150",
+        "logradouro":"Rua Jo\u00e3o Marques Pimentel",
+        "bairro":"Vila Hip\u00f3dromo",
+        "localidade":"S\u00e3o Jos\u00e9 do Rio Preto",
+        "uf":"SP"
+    },
+    {
+        "nome":"Miguel Edson Gon\u00e7alves",
+        "cpf":"710.745.549-49",
+        "email":"miguel-goncalves98@csjsistemas.com.br",
+        "cep":"69915-768",
+        "logradouro":"Rua Juriti",
+        "bairro":"Portal da Amaz\u00f4nia",
+        "localidade":"Rio Branco",
+        "uf":"AC"
+    },
+    {
+        "nome":"Luiza Mariah Sabrina Nunes",
+        "cpf":"518.457.300-38",
+        "email":"luizamariahnunes@startingfitness.com.br",
+        "cep":"64200-920",
+        "logradouro":"Rua Riachuelo",
+        "bairro":"Centro",
+        "localidade":"Parna\u00edba",
+        "uf":"PI"
+    },
+    {
+        "nome":"Pedro Henrique Yago Anderson Peixoto",
+        "cpf":"839.644.457-97",
+        "email":"pedrohenriquepeixoto@schon.com.br",
+        "cep":"60531-510",
+        "logradouro":"Rua 602",
+        "bairro":"Conjunto Cear\u00e1 I",
+        "localidade":"Fortaleza",
+        "uf":"CE"
+    },
+    {
+        "nome":"T\u00e2nia Brenda Carolina Baptista",
+        "cpf":"961.148.949-87",
+        "email":"tania-baptista76@infonet.com.br",
+        "cep":"49031-220",
+        "logradouro":"Rua Juarez de Oliveira Ribeiro",
+        "bairro":"Farol\u00e2ndia",
+        "localidade":"Aracaju",
+        "uf":"SE"
+    },
+    {
+        "nome":"Sophia Emanuelly Fabiana da Rosa",
+        "cpf":"356.318.999-49",
+        "email":"sophia_emanuelly_darosa@oul.com.br",
+        "cep":"58079-620",
+        "logradouro":"Rua Joeldo Apolin\u00e1rio",
+        "bairro":"Funcion\u00e1rios",
+        "localidade":"Jo\u00e3o Pessoa",
+        "uf":"PB"
+    },
+    {
+        "nome":"Gael S\u00e9rgio Silva",
+        "cpf":"535.398.010-73",
+        "email":"gael.sergio.silva@megapremiumvip.com",
+        "cep":"94060-512",
+        "logradouro":"Travessa Elemino Boeira de Souza",
+        "bairro":"Santa F\u00e9",
+        "localidade":"Gravata\u00ed",
+        "uf":"RS"
+    },
+    {
+        "nome":"Julia Ant\u00f4nia Mirella Souza",
+        "cpf":"563.208.783-20",
+        "email":"juliaantoniasouza@lanchesdahora.com.br",
+        "cep":"95735-970",
+        "logradouro":"Rua General Os\u00f3rio",
+        "bairro":"Centro",
+        "localidade":"Roca Sales",
+        "uf":"RS"
+    },
+    {
+        "nome":"Jaqueline Maya Rita Moreira",
+        "cpf":"991.734.028-93",
+        "email":"jaqueline_maya_moreira@gruposimoes.com.br",
+        "cep":"58108-276",
+        "logradouro":"Rua Jos\u00e9 Alves da N\u00f3brega",
+        "bairro":"Renascer",
+        "localidade":"Cabedelo",
+        "uf":"PB"
+    },
+    {
+        "nome":"Benedito Calebe Pires",
+        "cpf":"992.818.240-00",
+        "email":"benedito-pires73@rmsolutions.inf.br",
+        "cep":"52091-421",
+        "logradouro":"Rua Juma",
+        "bairro":"Nova Descoberta",
+        "localidade":"Recife",
+        "uf":"PE"
+    },
+    {
+        "nome":"Matheus Nelson Freitas",
+        "cpf":"736.457.434-48",
+        "email":"matheusnelsonfreitas@santander.com.br",
+        "cep":"64091-130",
+        "logradouro":"Rua Coronel Jos\u00e9 Fialho",
+        "bairro":"Gurupi",
+        "localidade":"Teresina",
+        "uf":"PI"
+    },
+    {
+        "nome":"Gabriel Julio Mateus Galv\u00e3o",
+        "cpf":"868.996.657-94",
+        "email":"gabriel_galvao@tokiomarine.com.br",
+        "cep":"69919-006",
+        "logradouro":"Rua Nossa Senhora Aparecida",
+        "bairro":"Loteamento Isaura Parente",
+        "localidade":"Rio Branco",
+        "uf":"AC"
+    },
+    {
+        "nome":"Diego Augusto Ramos",
+        "cpf":"095.804.391-41",
+        "email":"diegoaugustoramos@negleribeiro.com",
+        "cep":"69317-574",
+        "logradouro":"Rua Vega",
+        "bairro":"Cidade Sat\u00e9lite",
+        "localidade":"Boa Vista",
+        "uf":"RR"
+    },
+    {
+        "nome":"Amanda Liz Carolina Farias",
+        "cpf":"298.054.947-99",
+        "email":"amanda_liz_farias@expressoforte.com.br",
+        "cep":"72549-100",
+        "logradouro":"QR 119",
+        "bairro":"Santa Maria",
+        "localidade":"Bras\u00edlia",
+        "uf":"DF"
+    },
+    {
+        "nome":"Kevin Henry da Mata",
+        "cpf":"898.480.122-49",
+        "email":"kevinhenrydamata@anfip.org.br",
+        "cep":"32180-450",
+        "logradouro":"Rua da Neblina",
+        "bairro":"Recanto da Pampulha",
+        "localidade":"Contagem",
+        "uf":"MG"
+    },
+    {
+        "nome":"Valentina Elza Pereira",
+        "cpf":"244.302.406-71",
+        "email":"valentina_elza_pereira@castromobile.com.br",
+        "cep":"29145-004",
+        "logradouro":"Rua Oscar S\u00e1 Rodrigues",
+        "bairro":"Santa B\u00e1rbara",
+        "localidade":"Cariacica",
+        "uf":"ES"
+    },
+    {
+        "nome":"Manuela Catarina Hadassa Lopes",
+        "cpf":"992.575.422-46",
+        "email":"manuelacatarinalopes@comercialmendes.net",
+        "cep":"68908-110",
+        "logradouro":"Travessa Juli\u00e3o Ramos",
+        "bairro":"Jesus de Nazar\u00e9",
+        "localidade":"Macap\u00e1",
+        "uf":"AP"
+    },
+    {
+        "nome":"Pietro Bento Novaes",
+        "cpf":"885.583.327-89",
+        "email":"pietro_bento_novaes@bom.com.br",
+        "cep":"69901-046",
+        "logradouro":"Rua Jabuticaba",
+        "bairro":"Morada do Sol",
+        "localidade":"Rio Branco",
+        "uf":"AC"
+    },
+    {
+        "nome":"Matheus Ruan S\u00e9rgio Lima",
+        "cpf":"479.554.165-54",
+        "email":"matheus_lima@aclnet.com.br",
+        "cep":"79065-136",
+        "logradouro":"Rua Timb\u00fa",
+        "bairro":"Vila Moreninha II",
+        "localidade":"Campo Grande",
+        "uf":"MS"
+    },
+    {
+        "nome":"Ot\u00e1vio Oliver da Cunha",
+        "cpf":"026.295.728-03",
+        "email":"otavio-dacunha97@caiuas.com.br",
+        "cep":"28895-514",
+        "logradouro":"Rua Vit\u00f3ria",
+        "bairro":"Jardim Bela Vista",
+        "localidade":"Rio das Ostras",
+        "uf":"RJ"
+    },
+    {
+        "nome":"Victor Yuri Nogueira",
+        "cpf":"508.638.774-43",
+        "email":"victor-nogueira97@metroquali.com.br",
+        "cep":"69313-308",
+        "logradouro":"Rua JT-06",
+        "bairro":"Ol\u00edmpico",
+        "localidade":"Boa Vista",
+        "uf":"RR"
+    },
+    {
+        "nome":"Sophia L\u00edvia Sebastiana Carvalho",
+        "cpf":"619.436.600-18",
+        "email":"sophialiviacarvalho@orteca.com.br",
+        "cep":"09150-210",
+        "logradouro":"Caminho do Hospital Velho",
+        "bairro":"Paranapiacaba",
+        "localidade":"Santo Andr\u00e9",
+        "uf":"SP"
+    },
+    {
+        "nome":"Bryan Ot\u00e1vio Vinicius Silveira",
+        "cpf":"194.371.980-20",
+        "email":"bryanotaviosilveira@ouplook.com",
+        "cep":"68902-680",
+        "logradouro":"Avenida S\u00e3o Janu\u00e1rio",
+        "bairro":"Muca",
+        "localidade":"Macap\u00e1",
+        "uf":"AP"
+    },
+    {
+        "nome":"Lorena Sabrina Marlene Campos",
+        "cpf":"027.669.474-00",
+        "email":"lorena_campos@validtecnologia.com.br",
+        "cep":"68909-860",
+        "logradouro":"Rua Virginia da Costa",
+        "bairro":"Marabaixo",
+        "localidade":"Macap\u00e1",
+        "uf":"AP"
+    },
+    {
+        "nome":"Sandra Nair Heloisa da Rocha",
+        "cpf":"724.488.736-15",
+        "email":"sandra.nair.darocha@moppe.com.br",
+        "cep":"39401-204",
+        "logradouro":"Beco Marreco",
+        "bairro":"Santos Reis",
+        "localidade":"Montes Claros",
+        "uf":"MG"
+    },
+    {
+        "nome":"Diogo Samuel Jesus",
+        "cpf":"698.283.877-35",
+        "email":"diogo.samuel.jesus@pubdesign.com.br",
+        "cep":"74974-720",
+        "logradouro":"Rua Granito",
+        "bairro":"Virg\u00ednia Parque",
+        "localidade":"Aparecida de Goi\u00e2nia",
+        "uf":"GO"
+    },
+    {
+        "nome":"Bianca Raquel Pietra Dias",
+        "cpf":"878.378.051-35",
+        "email":"bianca_raquel_dias@gmnail.com",
+        "cep":"68906-647",
+        "logradouro":"Via Dezesseis",
+        "bairro":"Alvorada",
+        "localidade":"Macap\u00e1",
+        "uf":"AP"
+    }
+]
