@@ -1,0 +1,6 @@
+Convenção para nomear arquivos (sugestão):
+
+* Iniciar com números (data [ano/mês/dia] ou ordem lógica [01, 02...])
+* Separar blocos de metadata com "-" e palavras com "_"
+* Evitar espaços, acentos e caracteres especiais
+* Começar apenas a primeira letra da palavra com maiúsculo
