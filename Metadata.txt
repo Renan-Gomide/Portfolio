@@ -1,4 +1,4 @@
-Convenção para nomear arquivos (sugestão):
+Convenção usada para nomear arquivos:
 
 * Iniciar com números (data [ano/mês/dia] ou ordem lógica [01, 02...])
 * Separar blocos de metadata com "-" e palavras com "_"
