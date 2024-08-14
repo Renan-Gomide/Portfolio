@@ -1,19 +1,19 @@
 # Portfolio
  
 <h1 align="center">Hi 👋, I'm Renan Gomide</h1>
-<h3 align="center">A passionate for data science and Python</h3>
+<h3 align="center">A passionate for data and Python</h3>
 
 - 🔭 I’m currently working on **Document Editor**
 
-- 🌱 I’m currently learning **Python, SQL, Google Data Analytics**
+- 🌱 I’m currently learning **Python, SQL, JavaScript, AWS and GCP**
 
-- 👯 I’m looking to collaborate on **Data Science and Law**
+- 👯 I’m looking to collaborate on **Data Science and Data Engineering**
 
 - 👨‍💻 All of my projects are available at [https://github.com/Renan-Gomide/Portfolio](https://github.com/Renan-Gomide/Portfolio)
 
 - 📫 How to reach me **renangomide@gmail.com**
 
-- 📄 Know about my experiences [https://www.linkedin.com/in/renan-gomide-b9999066/](https://www.linkedin.com/in/renan-gomide-b9999066/)
+- 📄 Know about my experiences [https://www.linkedin.com/in/renan-gomide-b9999066/](https://www.linkedin.com/in/renan-gomide/)
 
 - ⚡ Fun fact **Passionate about Oriental Culture and pen-and-paper RPG**
 
